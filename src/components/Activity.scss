@@ -1,0 +1,55 @@
+%amount {
+  display: block;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+%type {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 8px;
+}
+
+.activity {
+  width: 100%;
+  border-bottom: 1px solid #c9c9c9;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &__category {
+    padding: 1rem;
+  }
+  &__wrapper {
+    margin-right: 1.2rem;
+  }
+  &__title {
+    display: block;
+    color: #302941;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  &__amount {
+    &--income {
+      @extend %amount;
+      color: #44ccbe;
+    }
+    &--expense {
+      @extend %amount;
+      color: #f56d6d;
+    }
+  }
+  &__date {
+    color: #b7b6bb;
+  }
+  &__type {
+    &--income {
+      @extend %type;
+      background-color: #44ccbe;
+    }
+    &--expense {
+      @extend %type;
+      background-color: #f56d6d;
+    }
+  }
+}

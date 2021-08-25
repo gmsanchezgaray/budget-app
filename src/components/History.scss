@@ -1,0 +1,22 @@
+.wrapper__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  &--element {
+    display: block;
+  }
+  a {
+    color: #7d52ff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    &:hover {
+      color: #ab95ea;
+    }
+  }
+}
+.history-card {
+  background-color: #fefefe;
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

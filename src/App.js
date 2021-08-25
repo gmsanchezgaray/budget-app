@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Balance from "./components/Balance";
+import Form from "./components/Form";
+import History from "./components/History";
+
+import "./App.scss";
 
 function App() {
+  const [showForm, setShowForm] = useState(false);
+  console.log(showForm);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Balance />
+      <History />
+      <Form showForm={showForm} />
+      <button onClick={() => setShowForm(!showForm)} className="btn btn__float">
+        ➕
+      </button>
     </div>
   );
 }
