@@ -1,21 +1,17 @@
-import { useState } from "react";
-import Balance from "./components/Balance";
-import Form from "./components/Form";
-import History from "./components/History";
-
+import Balance from "./components/Balance/Balance";
+import Form from "./components/Form/Form";
+import History from "./components/History/History";
+import ContextProvider from "./global-context/Context";
 import "./App.scss";
 
 function App() {
-  const [showForm, setShowForm] = useState(false);
-  console.log(showForm);
   return (
-    <div className="container">
-      <Balance />
-      <History />
-      <Form showForm={showForm} />
-      <button onClick={() => setShowForm(!showForm)} className="btn btn__float">
-        ➕
-      </button>
+    <div>
+      <ContextProvider>
+        <Balance />
+        <Form />
+        <History />
+      </ContextProvider>
     </div>
   );
 }

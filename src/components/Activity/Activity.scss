@@ -2,6 +2,7 @@
   display: block;
   margin-bottom: 1.5rem;
   letter-spacing: 0.5px;
+  text-align: end;
 }
 %type {
   position: absolute;
@@ -13,7 +14,8 @@
 .activity {
   width: 100%;
   border-bottom: 1px solid #c9c9c9;
-  display: flex;
+  display: grid;
+  grid-template-columns: 20% 40% 30%;
   align-items: center;
   position: relative;
   &__category {

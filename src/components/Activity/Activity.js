@@ -1,4 +1,3 @@
-import React from "react";
 import "./Activity.scss";
 
 const Activity = () => {
@@ -16,7 +15,7 @@ const Activity = () => {
         <h1 className="activity__category--icon">💰</h1>
       </div>
       <div className="activity__wrapper">
-        <p className="activity__title">Name Category</p>
+        <p className="activity__title">Category Name</p>
         <p className="activity__date">{formatted_date}</p>
         {/* //TODO En vez de agregar solo la fecha, agregar un boton con icono de info para mostrar: Fecha, categoria, tipo de  movimiento, detalle */}
       </div>

@@ -1,13 +1,15 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import ContextProvider from "../../global-context/Context";
 import "./Balance.scss";
 
 const Balance = () => {
+  const input = useContext(ContextProvider);
+  console.log(input);
   return (
     <>
       <div className="balance__card">
         <p className="balance__card--total">$2,860.00</p>
-        <p className="balance__card--label">Total Balance</p>
+        <p className="balance__card--label">Total Balance{input}</p>
       </div>
       <div className="balance__body">
         <div className="detail">
