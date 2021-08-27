@@ -1,23 +1,23 @@
 import React from "react";
-import Activity from "../Activity/Activity";
 
 import "./History.scss";
 
 const History = () => {
   return (
     <>
-      <div className="wrapper__header">
-        <h2 className="wrapper__header--element">History</h2>
-        <a href="#" className="wrapper__header--element">
-          View detail
-        </a>
-      </div>
-      <div className="history-card">
-        <Activity />
-        <Activity />
-        <Activity />
-        <Activity />
-        <Activity />
+      <div className="card" style={{ width: "18rem" }}>
+        <div className="card-header">History</div>
+        <ul className="list-group list-group-flush">
+          <li className="list-group-item d-flex justify-content-between">
+            Category Name <span>⬆ $9.000,00</span>
+          </li>
+          <li className="list-group-item d-flex justify-content-between">
+            Category Name <span>⬆ $9.000,00</span>
+          </li>
+          <li className="list-group-item d-flex justify-content-between">
+            Category Name <span>⬆ $9.000,00</span>
+          </li>
+        </ul>
       </div>
     </>
   );

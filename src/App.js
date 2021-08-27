@@ -1,17 +1,18 @@
+import { useState } from "react";
 import Balance from "./components/Balance/Balance";
 import Form from "./components/Form/Form";
 import History from "./components/History/History";
-import ContextProvider from "./global-context/Context";
-import "./App.scss";
+
+// import "./App.scss";
 
 function App() {
+  const [income, setIncome] = useState(0);
+  const [total, setTotal] = useState(0);
   return (
-    <div>
-      <ContextProvider>
-        <Balance />
-        <Form />
-        <History />
-      </ContextProvider>
+    <div className="container">
+      <Balance total={total} />
+      <Form />
+      <History />
     </div>
   );
 }
